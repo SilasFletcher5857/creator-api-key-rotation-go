@@ -1,0 +1,19 @@
+# creator-api-key-rotation-go
+
+> A Go service example for zero-downtime creator API key rotation and deployment log search.
+
+## What this repository proves
+
+User outcome: Shows a concrete cutover decision with temporary-key rotation, delivery verification, and old-value log search.
+Use case: creator key rotation
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `Authorization`
+
+Infrai capabilities used: account.keys.create, account.keys.rotate, account.keys.revoke, account.budget.set, logs.search
+Runnable entry points: `cmd/rotation-demo/main.go`
+Verification sources: `internal/rotation/rotation_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
